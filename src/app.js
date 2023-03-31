@@ -1,7 +1,8 @@
-var baseInput = document.querySelector('#base');
-var heightInput = document.querySelector('#height');
-var areaInput = document.querySelector('#area');
+var hosszInput = document.querySelector('#hossz');
+var elotolasInput = document.querySelector('#elotolas');
+var fordulatszamInput = document.querySelector('#fordulatszam');
 var calcButton = document.querySelector('#calcButton');
+var idoInput = document.querySelector('#ido');
 
 if(calcButton) {
 
@@ -17,24 +18,26 @@ if(calcButton) {
 
 function workInput() {
 
-    let baseGood = checkInput(baseInput.value);
-    let heightGood = checkInput(heightInput.value);
+    let hosszGood = checkInput(hosszInput.value);
+    let elotolasGood = checkInput(elotolasInput.value);
+    let fordulatszamGood = checkInput(elotolasInput.value);
 
-    if (baseGood && heightGood) {
-        let base = Number(baseInput.value);
-        let height = Number(heightInput.value);
-        let area = calcTriangleArea(base, height);
-        areaInput.value = area;
+    if (hosszGood && elotolasGood && fordulatszamGood) {
+        let hossz = Number(hosszInput.value);
+        let elotolas = Number(elotolasInput.value);
+        let fordulatszam = Number(fordulatszamInput.value);
+        let ido = calcEsztergaIdo(hossz, elotolas, fordulatszam);
+        idoInput.value = ido;
     } else {
         alert('Hiba')
     }
-    //checkInput(baseInput.value);
-    //console.log(typeof baseInput.value);
+    //checkInput(hosszInput.value);
+    //console.log(typeof hosszInput.value);
 }
 
-function calcTriangleArea(base, height) {
+function calcEsztergaIdo(hossz, elotolas, fordulatszam) {
 
-    return base * height / 2;
+    return hossz / (elotolas * fordulatszam);
 
 }
 

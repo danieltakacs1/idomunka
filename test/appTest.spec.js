@@ -3,17 +3,17 @@ describe('Az app.js tesztelése', () => {
 
     it('100, 130 => 6500', () => {
         
-        let actual = calcTriangleArea(100, 130);
+        let actual = calcEsztergaIdo(100, 130);
         expect(6500).toBe(actual);
     });
     it('30, 35 => 525', () => {
         
-        let actual = calcTriangleArea(30, 35);
+        let actual = calcEsztergaIdo(30, 35);
         expect(525).toBe(actual);
     });
     it('1, 3 => 1.5', () => {
         
-        let actual = calcTriangleArea(1, 3);
+        let actual = calcEsztergaIdo(1, 3);
         expect(1.5).toBe(actual);
     });
 
